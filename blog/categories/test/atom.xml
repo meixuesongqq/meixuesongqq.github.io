@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Test | My Note]]></title>
+  <link href="http://mynote.ubone.com/blog/categories/test/atom.xml" rel="self"/>
+  <link href="http://mynote.ubone.com/"/>
+  <updated>2015-05-01T20:49:57+08:00</updated>
+  <id>http://mynote.ubone.com/</id>
+  <author>
+    <name><![CDATA[Jason]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Test2]]></title>
+    <link href="http://mynote.ubone.com/blog/2015/05/01/test2/"/>
+    <updated>2015-05-01T20:48:55+08:00</updated>
+    <id>http://mynote.ubone.com/blog/2015/05/01/test2</id>
+    <content type="html"><![CDATA[<p>asdfasflkjwi w
+f
+wefweojfiwfejow</p>
+
+<p>wefowjefoijwioef</p>
+
+<p>wefowefiwejofi</p>
+
+<pre><code class="java">public class a {
+}
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>
