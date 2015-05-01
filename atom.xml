@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[My Note]]></title>
-  <link href="http://mynote.ubone.com/atom.xml" rel="self"/>
-  <link href="http://mynote.ubone.com/"/>
-  <updated>2015-05-01T20:49:57+08:00</updated>
-  <id>http://mynote.ubone.com/</id>
+  <link href="http://meixuesongqq.github.io/atom.xml" rel="self"/>
+  <link href="http://meixuesongqq.github.io/"/>
+  <updated>2015-05-01T21:09:53+08:00</updated>
+  <id>http://meixuesongqq.github.io/</id>
   <author>
     <name><![CDATA[Jason]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Test2]]></title>
-    <link href="http://mynote.ubone.com/blog/2015/05/01/test2/"/>
+    <link href="http://meixuesongqq.github.io/blog/2015/05/01/test2/"/>
     <updated>2015-05-01T20:48:55+08:00</updated>
-    <id>http://mynote.ubone.com/blog/2015/05/01/test2</id>
+    <id>http://meixuesongqq.github.io/blog/2015/05/01/test2</id>
     <content type="html"><![CDATA[<p>asdfasflkjwi w
 f
 wefweojfiwfejow</p>
@@ -37,9 +37,9 @@ wefweojfiwfejow</p>
   
   <entry>
     <title type="html"><![CDATA[Test]]></title>
-    <link href="http://mynote.ubone.com/blog/2015/05/01/test/"/>
+    <link href="http://meixuesongqq.github.io/blog/2015/05/01/test/"/>
     <updated>2015-05-01T20:40:42+08:00</updated>
-    <id>http://mynote.ubone.com/blog/2015/05/01/test</id>
+    <id>http://meixuesongqq.github.io/blog/2015/05/01/test</id>
     <content type="html"><![CDATA[
 ]]></content>
   </entry>
