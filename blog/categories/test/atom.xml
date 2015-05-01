@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Test | My Note]]></title>
   <link href="http://meixuesongqq.github.io/blog/categories/test/atom.xml" rel="self"/>
   <link href="http://meixuesongqq.github.io/"/>
-  <updated>2015-05-01T21:09:53+08:00</updated>
+  <updated>2015-05-01T21:49:48+08:00</updated>
   <id>http://meixuesongqq.github.io/</id>
   <author>
     <name><![CDATA[Jason]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Test3]]></title>
+    <link href="http://meixuesongqq.github.io/blog/2015/05/01/test3/"/>
+    <updated>2015-05-01T21:49:24+08:00</updated>
+    <id>http://meixuesongqq.github.io/blog/2015/05/01/test3</id>
+    <content type="html"><![CDATA[<p>asflsfjas22222222222222</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Test2]]></title>
