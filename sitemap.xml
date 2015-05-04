@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://meixuesongqq.github.io/blog/2015/05/02/emberbi-ji/</loc>
+    <lastmod>2015-05-02T10:18:49+08:00</lastmod>
+  </url>
+  <url>
     <loc>http://meixuesongqq.github.io/blog/archives/</loc>
   </url>
   <url>
     <loc>http://meixuesongqq.github.io/</loc>
+  </url>
+  <url>
+    <loc>http://meixuesongqq.github.io/blog/categories/javascript/</loc>
   </url>
 </urlset>

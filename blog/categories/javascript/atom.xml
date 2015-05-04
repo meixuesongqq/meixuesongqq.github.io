@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Note]]></title>
-  <link href="http://meixuesongqq.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Javascript | My Note]]></title>
+  <link href="http://meixuesongqq.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://meixuesongqq.github.io/"/>
   <updated>2015-05-04T23:27:50+08:00</updated>
   <id>http://meixuesongqq.github.io/</id>
@@ -29,24 +29,24 @@
 
 <p>注意不要使用sudo.</p>
 
-<pre  class='line-numbers language-bash'><code class='language-bash'># install brew
+<pre><code># install brew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 #install node
 brew install node
 brew install watchman
 #install ember
 npm install -g ember-cli
-npm install -g phantomjs</code></pre>
-
+npm install -g phantomjs
+</code></pre>
 
 <h3>TESTING YOUR INSTALLATION</h3>
 
 <p>建立一个简单应用验证安装是否成功：</p>
 
-<pre  class='line-numbers language-bash'><code class='language-bash'>ember new my-app
+<pre><code>ember new my-app
 cd my-app
-ember server</code></pre>
-
+ember server
+</code></pre>
 
 <h2>2. Concepts</h2>
 
@@ -59,7 +59,7 @@ ember server</code></pre>
 <p>Templates可以包含:</p>
 
 <ol>
-<li>Expressions：</li>
+<li>Expressions： </li>
 <li>Outlets：包含其它Templates. You can put outlets into your template using the  helper.</li>
 <li>Components, custom HTML elements that you can use to clean up repetitive templates or create reusable controls.</li>
 </ol>
@@ -106,20 +106,20 @@ ember server</code></pre>
 
 <p>对于route:favorites，可以指定Model:</p>
 
-<pre class='line-numbers language-javascript'><code class='language-javascript'>export default Ember.Route.extend({
+<pre><code class="javascript">export default Ember.Route.extend({
   model: function() {
     // the model is an Array of all of the posts
     // fetched from this url
     return $.ajax('/a/service/url/where/posts/live');
   }
-});</code></pre>
-
+});
+</code></pre>
 
 <h4>DYNAMIC SEGMENTS</h4>
 
 <p>指URL中包含参数。</p>
 
-<pre class='line-numbers language-javascript'><code class='language-javascript'>export default Ember.Router.extend().map(function(){
+<pre><code class="javascript">export default Ember.Router.extend().map(function(){
   this.route('post', { path: '/posts/:post_id' });
 });
 
@@ -132,8 +132,8 @@ export default Ember.Route.extend({
   serialize: function(post) {
     return { post_id: Ember.get(post, 'id') };
   }
-});</code></pre>
-
+});
+</code></pre>
 
 <p>由于这种模式很常见，因此约定：</p>
 
@@ -153,29 +153,29 @@ export default Ember.Route.extend({
 
 <h4>NESTING</h4>
 
-<pre class='line-numbers language-javascript'><code class='language-javascript'>export default Ember.Router.extend().map(function(){
+<pre><code class="javascript">export default Ember.Router.extend().map(function(){
   this.route('posts', function() {    // the `posts` route
     this.route('favorites');          // the `posts.favorites` route
     this.route('post');               // the `posts.post` route
   });
-});</code></pre>
-
+});
+</code></pre>
 
 <h4>THE INDEX ROUTE</h4>
 
 <p>At every level of nesting (including the top level), Ember.js automatically provides a route for the / path named index.</p>
 
-<pre class='line-numbers language-javascript'><code class='language-javascript'>export default Ember.Router.extend().map(function(){
+<pre><code class="javascript">export default Ember.Router.extend().map(function(){
   this.route('index', { path: '/' });  //可以省略，默认自带
   this.route('favorites');
-});</code></pre>
-
+});
+</code></pre>
 
 <h2>3. The Object Model</h2>
 
 <h3>3.1 Classes and Instances</h3>
 
-<pre class='line-numbers language-javascript'><code class='language-javascript'>Person = Ember.Object.extend({
+<pre><code class="javascript">Person = Ember.Object.extend({
   say: function(thing) {
     var name = this.get('name');
     alert(name + " says: " + thing);
@@ -192,24 +192,24 @@ var yehuda = Soldier.create({
   name: "Yehuda Katz"
 });
 
-yehuda.say("Yes"); // alerts "Yehuda Katz says: Yes, sir!"</code></pre>
-
+yehuda.say("Yes"); // alerts "Yehuda Katz says: Yes, sir!"
+</code></pre>
 
 <blockquote><p>For performance reasons, note that you cannot redefine an instance&rsquo;s computed properties or methods when calling create(), nor can you define new ones. You should only set simple properties when calling create().</p></blockquote>
 
 <p>init方法会在对象创建时自动调用，因此可用于初始化一些设置。如果是继承自框架类，如Ember.View or Ember.ArrayController,一定要在init中调用this._super()：</p>
 
-<pre class='line-numbers language-javascript'><code class='language-javascript'>Person = Ember.Object.extend({
+<pre><code class="javascript">Person = Ember.Object.extend({
   init: function() {
     var name = this.get('name');
     alert(name + ", reporting for duty!");
   }
-});</code></pre>
-
+});
+</code></pre>
 
 <h3>3.2 COMPUTED PROPERTIES</h3>
 
-<pre class='line-numbers language-javascript'><code class='language-javascript'>Person = Ember.Object.extend({
+<pre><code class="javascript">Person = Ember.Object.extend({
   // these will be supplied by `create`
   firstName: null,
   lastName: null,
@@ -225,33 +225,33 @@ var ironMan = Person.create({
   lastName:  "Stark"
 });
 
-ironMan.get('fullName'); // "Tony Stark"</code></pre>
-
+ironMan.get('fullName'); // "Tony Stark"
+</code></pre>
 
 <p>如果 <a href="http://guides.emberjs.com/v1.11.0/configuring-ember/disabling-prototype-extensions/">disabling prototype extensions guide</a>，可以改成：</p>
 
-<pre class='line-numbers language-javascript'><code class='language-javascript'>fullName: Ember.computed('firstName', 'lastName', function() {
+<pre><code class="javascript">fullName: Ember.computed('firstName', 'lastName', function() {
     return this.get('firstName') + ' ' + this.get('lastName');
-  })</code></pre>
-
+  })
+</code></pre>
 
 <p><strong>CHAINING COMPUTED PROPERTIES</strong>，计算字段可以再依赖计算字段。</p>
 
-<pre class='line-numbers language-javascript'><code class='language-javascript'>  fullName: function() {
+<pre><code class="javascript">  fullName: function() {
     return this.get('firstName') + ' ' + this.get('lastName');
   }.property('firstName', 'lastName'),
 
   description: function() {
     return this.get('fullName') + '; Age: ' + this.get('age') + 
         '; Country: ' + this.get('country');
-  }.property('fullName', 'age', 'country')</code></pre>
-
+  }.property('fullName', 'age', 'country')
+</code></pre>
 
 <p>任何计算字段的依赖项发生变化时，都会自动触发计算字段重新计算。</p>
 
 <p><strong>SETTING COMPUTED PROPERTIES</strong></p>
 
-<pre class='line-numbers language-javascript'><code class='language-javascript'>Person = Ember.Object.extend({
+<pre><code class="javascript">Person = Ember.Object.extend({
   firstName: null,
   lastName: null,
 
@@ -272,14 +272,14 @@ ironMan.get('fullName'); // "Tony Stark"</code></pre>
 var captainAmerica = Person.create();
 captainAmerica.set('fullName', "William Burnside");
 captainAmerica.get('firstName'); // William
-captainAmerica.get('lastName'); // Burnside</code></pre>
-
+captainAmerica.get('lastName'); // Burnside
+</code></pre>
 
 <h3>3.3 COMPUTED PROPERTIES AND AGGREGATE DATA WITH @EACH</h3>
 
 <p><code>@each</code>instructs Ember.js to update bindings and fire observers for this computed property. 下面的例子中，当isDone属性、数组元素数量发生变化、todos换成另一个数组时，都会触发更新。</p>
 
-<pre class='line-numbers language-javascript'><code class='language-javascript'>export default Ember.Controller.extend({
+<pre><code>export default Ember.Controller.extend({
   todos: [
     Ember.Object.create({ isDone: true }),
     Ember.Object.create({ isDone: false }),
@@ -290,8 +290,8 @@ captainAmerica.get('lastName'); // Burnside</code></pre>
     var todos = this.get('todos');
     return todos.filterBy('isDone', false).get('length');
   }.property('todos.@each.isDone')
-});</code></pre>
-
+});
+</code></pre>
 
 <h3>3.4 Observers</h3>
 
