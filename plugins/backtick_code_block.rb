@@ -1,6 +1,7 @@
 require './plugins/pygments_code'
 
 module BacktickCodeBlock
+  include HighlightCode
   AllOptions = /([^\s]+)\s+(.+?)\s+(https?:\/\/\S+|\/\S+)\s*(.+)?/i
   LangCaption = /([^\s]+)\s*(.+)?/i
   def self.render_code_block(input)
@@ -25,17 +26,22 @@ module BacktickCodeBlock
         str = str.gsub(/^( {4}|\t)/, '')
       end
       if @lang.nil? || @lang == 'plain'
-        code = HighlightCode::tableize_code(str.gsub('<','&lt;').gsub('>','&gt;'))
-        "<figure class='code'>#{@caption}#{code}</figure>"
+        #mxs comment code = tableize_code(str.gsub('<','&lt;').gsub('>','&gt;'))
+        #mxs comment "<figure class='code'>#{@caption}#{code}</figure>"
+        mxscode = str.gsub('<','&lt;').gsub('>','&gt;')
+        "<pre  class='line-numbers language-bash'><code class='language-bash'>#{mxscode}</code></pre>" 
       else
-        if @lang.include? "-raw"
-          raw = "``` #{@options.sub('-raw', '')}\n"
-          raw += str
-          raw += "\n```\n"
-        else
-          code = HighlightCode::highlight(str, @lang)
-          "<figure class='code'>#{@caption}#{code}</figure>"
-        end
+        mxscode = str.gsub('<','&lt;').gsub('>','&gt;')
+        "<pre class='line-numbers language-#{@lang}'><code class='language-#{@lang}'>#{mxscode}</code></pre>" 
+# mxs comment        
+#        if @lang.include? "-raw"
+#          raw = "``` #{@options.sub('-raw', '')}\n"
+#          raw += str
+#          raw += "\n```\n"
+#        else
+#          code = highlight(str, @lang)
+#          "<figure class='code'>#{@caption}#{code}</figure>"
+#        end
       end
     end
   end
