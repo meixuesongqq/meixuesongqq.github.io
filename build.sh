@@ -1,7 +1,7 @@
 rake generate
 rake deploy
 git add .
-git commit -m '写博客'
+git commit -m 'Add TOC support'
 git push origin source
 echo "发布结束"
 #cd _deploy

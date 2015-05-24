@@ -3,6 +3,7 @@ layout: post
 title: "Ember笔记"
 date: 2015-05-02 10:18:49 +0800
 comments: true
+toc: true
 categories: 
 - javascript
 ---
